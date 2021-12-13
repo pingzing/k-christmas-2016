@@ -89,6 +89,24 @@ namespace KChristmas.AzureFunctions
                 { null, "But I also know that waiting is the wor-hor-hor-hoooorst!", 3000 },
                 { "pinkie_confused.png", "So if you're shaking this box and totally excited about what's inside and can't wait?", 4500 },
                 { "pinkie_bounce_up_3.png", "I am TOTALLY right there with you!", 3000 },
+            },
+            new PinkieEvent(Guid.Parse("bdbe16e6-8766-4840-b5d9-bf1771049868"))
+            {
+                { "pinkie_backwards_1.png", "Oh! Wow, where is everybody?", 3000 },
+                { null, "Gosh, it's *super* dark in here!", 3000 },
+                { null, "...hey, wait a minute.", 2000 },
+                { "pinkie_confused.png", "Huh?", 2000 },
+                { "pinkie_bounce_up_3.png", "Oh! There you are!", 2000 },
+                { null, "You were all backwards! Hiiii!", 3000 },
+            },
+            new PinkieEvent(Guid.Parse("1bdd2cf2-214e-4427-95b8-209491c43f9c"))
+            {
+                { null, "So I wanna show you something super coolio.", 3000 },
+                { null, "I've been practicing it ALL NIGHT!", 3000 },
+                { null, "It's my super-duper-looper awesome ANTI-CANCER KICK!", 3000 },
+                { "pinkie_woundup_vertical.png", "POW!", 3000 },
+                { "pinkie_bounce_up_3.png", "See? Whaddaya think? Pretty great, huh?", 3000 },
+                { null, "I know you don't need it anymore, but I think it's pretty neat!", 4000 },
             }
         };
 
