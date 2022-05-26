@@ -31,5 +31,5 @@ namespace KChristmas.Core.XamlExtensions
                 return path;
             }
         }
-    }   
+    }
 }

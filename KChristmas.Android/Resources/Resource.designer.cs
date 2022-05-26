@@ -14,7 +14,7 @@ namespace KChristmas.Android
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.0.11")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.3.0.26")]
 	public partial class Resource
 	{
 		
@@ -17459,52 +17459,58 @@ namespace KChristmas.Android
 			public const int notify_panel_notification_icon_bg = 2131165536;
 			
 			// aapt resource value: 0x7F070161
-			public const int pinkie_bounce_up_1 = 2131165537;
+			public const int pinkie_backwards_1 = 2131165537;
 			
 			// aapt resource value: 0x7F070162
-			public const int pinkie_bounce_up_2 = 2131165538;
+			public const int pinkie_bounce_up_1 = 2131165538;
 			
 			// aapt resource value: 0x7F070163
-			public const int pinkie_bounce_up_3 = 2131165539;
+			public const int pinkie_bounce_up_2 = 2131165539;
 			
 			// aapt resource value: 0x7F070164
-			public const int pinkie_confused = 2131165540;
+			public const int pinkie_bounce_up_3 = 2131165540;
 			
 			// aapt resource value: 0x7F070165
-			public const int pinkie_woundup_1 = 2131165541;
+			public const int pinkie_confused = 2131165541;
 			
 			// aapt resource value: 0x7F070166
-			public const int pinkie_woundup_2 = 2131165542;
+			public const int pinkie_woundup_1 = 2131165542;
 			
 			// aapt resource value: 0x7F070167
-			public const int pinkie_woundup_3 = 2131165543;
+			public const int pinkie_woundup_2 = 2131165543;
 			
 			// aapt resource value: 0x7F070168
-			public const int preference_list_divider_material = 2131165544;
+			public const int pinkie_woundup_3 = 2131165544;
 			
 			// aapt resource value: 0x7F070169
-			public const int reading_glasses_small = 2131165545;
+			public const int pinkie_woundup_vertical = 2131165545;
 			
 			// aapt resource value: 0x7F07016A
-			public const int reading_glasses_small_high_blur = 2131165546;
+			public const int preference_list_divider_material = 2131165546;
 			
 			// aapt resource value: 0x7F07016B
-			public const int reading_glasses_small_medium_blur = 2131165547;
+			public const int reading_glasses_small = 2131165547;
 			
 			// aapt resource value: 0x7F07016C
-			public const int sad_kitty = 2131165548;
+			public const int reading_glasses_small_high_blur = 2131165548;
 			
 			// aapt resource value: 0x7F07016D
-			public const int test_custom_background = 2131165549;
+			public const int reading_glasses_small_medium_blur = 2131165549;
 			
 			// aapt resource value: 0x7F07016E
-			public const int tooltip_frame_dark = 2131165550;
+			public const int sad_kitty = 2131165550;
 			
 			// aapt resource value: 0x7F07016F
-			public const int tooltip_frame_light = 2131165551;
+			public const int test_custom_background = 2131165551;
 			
 			// aapt resource value: 0x7F070170
-			public const int why_2020 = 2131165552;
+			public const int tooltip_frame_dark = 2131165552;
+			
+			// aapt resource value: 0x7F070171
+			public const int tooltip_frame_light = 2131165553;
+			
+			// aapt resource value: 0x7F070172
+			public const int why_2020 = 2131165554;
 			
 			static Drawable()
 			{

@@ -1,5 +1,5 @@
-using Xamarin.Essentials;
 using System;
+using Xamarin.Essentials;
 
 namespace KChristmas.Core.Helpers
 {
@@ -20,8 +20,8 @@ namespace KChristmas.Core.Helpers
 
         public static bool GiftAccepted
         {
-            get { return Preferences.Get(GiftAcceptedKey, GiftAcceptedDefault); }
-            set { Preferences.Set(GiftAcceptedKey, value); }
+            get => Preferences.Get(GiftAcceptedKey, GiftAcceptedDefault);
+            set => Preferences.Set(GiftAcceptedKey, value);
         }
 
         /// <summary>
@@ -59,6 +59,5 @@ namespace KChristmas.Core.Helpers
                 Preferences.Set(LastSeenVersionKey, versionAsString);
             }
         }
-
     }
 }
