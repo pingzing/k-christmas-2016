@@ -1,10 +1,10 @@
-﻿using KChristmas.Core.Helpers;
-using System;
-
+﻿using System;
+using KChristmas.Core.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+
 namespace KChristmas.Core
 {
     public partial class App : Application
@@ -25,7 +25,7 @@ namespace KChristmas.Core
             }
             Settings.LastSeenVersion = CURRENT_VERSION;
 
-            NetworkService networkService = new NetworkService();
+            var networkService = new NetworkService();
             MainPage = Navigation;
             Navigation.PushAsync(new MainPage(networkService));
         }

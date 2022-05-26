@@ -6,6 +6,17 @@
 		<LangVersion>8.0</LangVersion>
 	</PropertyGroup>
 
+  <Target Name="_BeforeBeforeBuild" BeforeTargets="BeforeBuild">
+    <Exec Command="
+          echo Running dotnet format...
+          dotnet format style KChristmas.Core.csproj
+          dotnet format analyzers KChristmas.Core.csproj
+          echo dotnet format complete. Running csharpier...
+          dotnet csharpier . --fast
+          echo csharpier complete.
+          "/>
+  </Target>
+
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
 		<PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
