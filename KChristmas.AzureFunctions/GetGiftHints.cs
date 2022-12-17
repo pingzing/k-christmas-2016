@@ -10,7 +10,8 @@ namespace KChristmas.AzureFunctions
 {
     public static class GetGiftHints
     {
-        private static readonly string[] GiftHints = new[] {
+        private static readonly string[] GiftHints = new[]
+        {
             "It's smaller than a breadbox.",
             "Careful! It could be fragile!",
             "Focus, and shake again.",
@@ -134,12 +135,20 @@ namespace KChristmas.AzureFunctions
             "\"My, aren't you a forward one...\"",
             "What would you do if, in the box was a fox, that wanted some lox?",
             "That's weird. Something tastes pink.",
-    };
+            "Tastes kinda... Dream-like?",
+            "Not dream-like, actually. Kinda nightmarish. Careful.",
+            "Hey, that's a nice ring!",
+            "The box mumbles sleepily, then turns over.",
+            "\"What are you, some kinda homeowner?\"",
+            "Definitely not Elon Musk. Eurgh.",
+            "Smells like something brighter."
+        };
 
         [FunctionName("GetGiftHints")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req,
-            ILogger log)
+            ILogger log
+        )
         {
             log.LogInformation($"Returning GiftHints at {DateTime.UtcNow}");
 
