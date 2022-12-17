@@ -27,36 +27,44 @@ namespace KChristmas.Core
             await Task.Delay(1000);
 
             await Task.WhenAll(
-                AcceptGiftPanelCaption1.FadeTo(1, 2000),
-                AcceptGiftPanelCaption1.ScaleTo(1, 2000)
+                AcceptGiftPanelStep1.FadeTo(1, 2000),
+                AcceptGiftPanelStep1.ScaleTo(1, 2000)
             );
 
             await Task.Delay(3000);
 
             await Task.WhenAll(
-                AcceptGiftPanelCaption2.FadeTo(1, 2000),
-                AcceptGiftPanelCaption2.ScaleTo(1, 2000)
+                AcceptGiftPanelStep2.FadeTo(1, 2000),
+                AcceptGiftPanelStep2.ScaleTo(1, 2000)
             );
 
             await Task.Delay(2000);
 
             await Task.WhenAll(
-                AcceptGiftPanelCaption3.ScaleTo(1, 2000),
-                AcceptGiftPanelCaption3.FadeTo(1, 2000)
+                AcceptGiftPanelStep3.ScaleTo(1, 2000),
+                AcceptGiftPanelStep3.FadeTo(1, 2000)
             );
 
             await Task.Delay(4000);
 
             await Task.WhenAll(
-                AcceptGiftPanelCaption4.ScaleTo(1, 2000),
-                AcceptGiftPanelCaption4.FadeTo(1, 2000)
+                AcceptGiftPanelStep4.ScaleTo(1, 2000),
+                AcceptGiftPanelStep4.FadeTo(1, 2000)
             );
 
-            await Task.Delay(3000);
+            await Task.Delay(1000);
 
             await Task.WhenAll(
-                AcceptGiftPanelCaption5.ScaleTo(1, 2000),
-                AcceptGiftPanelCaption5.FadeTo(1, 2000)
+                AcceptGiftPanelStep5.ScaleTo(1, 2000),
+                AcceptGiftPanelStep5.FadeTo(1, 2000),
+                PhoneOverlayImage.FadeTo(1, 2000)
+            );
+
+            await Task.Delay(1500);
+
+            await Task.WhenAll(
+                AcceptGiftPanelStep6.ScaleTo(1, 2000),
+                AcceptGiftPanelStep6.FadeTo(1, 2000)
             );
         }
     }

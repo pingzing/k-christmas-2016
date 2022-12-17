@@ -18,17 +18,17 @@ namespace KChristmas.Core.SpecialEvents
         private static readonly PinkieEvent _firstTimeEvent = new PinkieEvent(_firstTimeScriptGuid)
         {
             { "pinkie_bounce_up_3.png", "Hi!", 3000 },
-            { "pinkie_confused.png", "Hey, wait a minute...", 4000 },
-            { null, "...this isn't the Hearth's Warming Eve party!", 4000 },
-            { null, "...", 2000 },
-            { null, "...haaaaang on a second.", 3000 },
-            { "pinkie_bounce_up_3.png", "We've met before, haven't we?", 3000 },
-            { null, "I *totally* recognize you! Ohmigosh, this is so exciting!", 4000 },
-            { null, "How are you doing? Things are pretty great over here!", 3000 },
-            { "pinkie_confused.png", "Oh, shoot, I gotta run", 3000 },
+            { null, "Oh! Oh! I'm here again!", 3000 },
+            { null, "You know what's totally crazy-eriffic?", 4000 },
+            { null, "Even *I* don't know when I'm going to end up here!", 4000 },
+            { null, "That's like... unpresent-tendeded...ed!", 3000 },
+            { null, "In fact...", 2000 },
+            { null, "I bet *you* know what's going on, don'tcha?", 4000 },
+            { null, "Well, don't you worry!", 3000 },
+            { "pinkie_bounce_wink.png", "Your secret's safe with Auntie Pinkie!", 3000 },
             {
                 "pinkie_bounce_up_3.png",
-                "It was really great to run into you again though! Byeeee!",
+                "Super-booper great to see you again though! Byeeee!",
                 3000
             },
         };
@@ -103,451 +103,52 @@ namespace KChristmas.Core.SpecialEvents
 
             double totalMillis = 3000.0;
             double tick = 25.0 / totalMillis;
+            // csharpier-ignore-start
             var boxShudderSlamOpen = new Animation
             {
-                {
-                    0.0,
-                    tick * 1,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        0,
-                        10
-                    )
-                },
-                {
-                    tick * 1,
-                    tick * 2,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 2,
-                    tick * 3,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 3,
-                    tick * 4,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    tick * 4,
-                    tick * 5,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        0,
-                        10
-                    )
-                },
-                {
-                    tick * 5,
-                    tick * 6,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 6,
-                    tick * 7,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    tick * 7,
-                    tick * 8,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 8,
-                    tick * 9,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 9,
-                    tick * 10,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    tick * 10,
-                    tick * 11,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        0,
-                        10
-                    )
-                },
-                {
-                    tick * 11,
-                    tick * 12,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 12,
-                    tick * 13,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    tick * 13,
-                    tick * 14,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 14,
-                    tick * 15,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 15,
-                    tick * 16,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    tick * 16,
-                    tick * 17,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        0,
-                        10
-                    )
-                },
-                {
-                    tick * 17,
-                    tick * 18,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 18,
-                    tick * 19,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    tick * 19,
-                    tick * 20,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 20,
-                    tick * 21,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 21,
-                    tick * 22,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    tick * 22,
-                    tick * 23,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        0,
-                        10
-                    )
-                },
-                {
-                    tick * 23,
-                    tick * 24,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 24,
-                    tick * 25,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    tick * 25,
-                    tick * 26,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 26,
-                    tick * 27,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 27,
-                    tick * 28,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationX = v;
-                            giftTop.TranslationX = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    tick * 28,
-                    tick * 29,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        0,
-                        10
-                    )
-                },
-                {
-                    tick * 29,
-                    tick * 30,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        10,
-                        -10
-                    )
-                },
-                {
-                    tick * 30,
-                    tick * 31,
-                    new Animation(
-                        v =>
-                        {
-                            giftBase.TranslationY = v;
-                            giftTop.TranslationY = v;
-                        },
-                        -10,
-                        0
-                    )
-                },
-                {
-                    0.95,
-                    0.97,
-                    new Animation(
-                        v =>
-                            pinkieImage.Source = ImageExtension.GetPlatformIndependentPath(
-                                "pinkie_woundup_2.png"
-                            ),
-                        0,
-                        0
-                    )
-                },
-                {
-                    0.95,
-                    0.98,
-                    new Animation(v => giftBase.TranslationY = v, 0, -30, Easing.SpringOut)
-                },
-                {
-                    0.97,
-                    1.0,
-                    new Animation(
-                        v =>
-                            pinkieImage.Source = ImageExtension.GetPlatformIndependentPath(
-                                "pinkie_woundup_3.png"
-                            ),
-                        0,
-                        0
-                    )
-                },
-                {
-                    0.98,
-                    1.0,
-                    new Animation(v => giftBase.TranslationY = v, -30, 0, Easing.SpringOut)
-                },
-                {
-                    0.95,
-                    1.0,
-                    new Animation(v => giftTop.TranslationY = v, 0, -500, Easing.CubicOut)
-                }
+                { 0.0, tick * 1, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 0, 10) },
+                { tick * 1, tick * 2, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 2, tick * 3, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 3, tick * 4, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, -10, 0) },
+                { tick * 4, tick * 5, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 0, 10) },
+                { tick * 5, tick * 6, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 10, -10) },
+                { tick * 6, tick * 7, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, -10, 0) },
+
+                { tick * 7, tick * 8, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 8, tick * 9, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 9, tick * 10, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, -10, 0) },
+                { tick * 10, tick * 11, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 0, 10) },
+                { tick * 11, tick * 12, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 10, -10) },
+                { tick * 12, tick * 13, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, -10, 0) },
+
+                { tick * 13, tick * 14, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 14, tick * 15, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 15, tick * 16, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, -10, 0) },
+                { tick * 16, tick * 17, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 0, 10) },
+                { tick * 17, tick * 18, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 10, -10) },
+                { tick * 18, tick * 19, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, -10, 0) },
+
+                { tick * 19, tick * 20, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 20, tick * 21, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 21, tick * 22, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, -10, 0) },
+                { tick * 22, tick * 23, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 0, 10) },
+                { tick * 23, tick * 24, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 10, -10) },
+                { tick * 24, tick * 25, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, -10, 0) },
+
+                { tick * 25, tick * 26, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 26, tick * 27, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, 10, -10) },
+                { tick * 27, tick * 28, new Animation(v => { giftBase.TranslationX = v; giftTop.TranslationX = v; }, -10, 0) },
+                { tick * 28, tick * 29, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 0, 10) },
+                { tick * 29, tick * 30, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, 10, -10) },
+                { tick * 30, tick * 31, new Animation(v => { giftBase.TranslationY = v; giftTop.TranslationY = v; }, -10, 0) },
+
+                { 0.95, 0.97, new Animation(v => pinkieImage.Source = ImageExtension.GetPlatformIndependentPath("pinkie_woundup_2.png"), 0, 0) },
+                { 0.95, 0.98, new Animation(v => giftBase.TranslationY = v, 0, -30, Easing.SpringOut) },
+                { 0.97, 1.0, new Animation(v => pinkieImage.Source = ImageExtension.GetPlatformIndependentPath("pinkie_woundup_3.png"), 0, 0) },
+                { 0.98, 1.0, new Animation(v => giftBase.TranslationY = v, -30, 0, Easing.SpringOut) },
+                { 0.95, 1.0, new Animation(v => giftTop.TranslationY = v, 0, -500, Easing.CubicOut) }
             };
+            // csharpier-ignore-end
 
             boxShudderSlamOpen.Commit(giftBase, "BoxShduder", 16, (uint)totalMillis);
             await Task.Delay((int)totalMillis);

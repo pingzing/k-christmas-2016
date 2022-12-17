@@ -13,14 +13,13 @@
           dotnet format analyzers KChristmas.Core.csproj
           echo dotnet format complete. Running csharpier...
           dotnet csharpier . --fast
-          echo csharpier complete.
-          "/>
+          echo csharpier complete." />
   </Target>
 
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-		<PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
-		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2244" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.7.4" />
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -135,6 +135,8 @@
     <Content Include="Assets\Images\gift_top_small.scale-240.png" />
     <Content Include="Assets\Images\gift_top_small.scale-250.png" />
     <Content Include="Assets\Images\gift_top_small.scale-300.png" />
+    <Content Include="Assets\Images\nightmare.png" />
+    <Content Include="Assets\Images\phone.png" />
     <Content Include="Assets\Images\pinkie_bounce_up_1.png" />
     <Content Include="Assets\Images\pinkie_bounce_up_2.png" />
     <Content Include="Assets\Images\pinkie_bounce_up_3.png" />
@@ -236,10 +238,10 @@
       <Version>6.1.9</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>1.7.0</Version>
+      <Version>1.7.4</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>5.0.0.2244</Version>
+      <Version>5.0.0.2545</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

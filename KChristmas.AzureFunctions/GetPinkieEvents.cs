@@ -15,18 +15,21 @@ namespace KChristmas.AzureFunctions
     {
         private static readonly List<PinkieEvent> _storedPinkieEvents = new List<PinkieEvent>
         {
-            new PinkieEvent(Guid.Parse("c7d8c4d5-3d75-4ee9-ac80-51a68b5ea1c9")) {
+            new PinkieEvent(Guid.Parse("c7d8c4d5-3d75-4ee9-ac80-51a68b5ea1c9"))
+            {
                 { "pinkie_confused.png", "Soooooo...", 2000 },
                 { null, "I don't get it.", 3000 },
                 { null, "Shouldn't all this shaking break the present?", 3000 },
                 { "pinkie_bounce_up_3.png", "Unless...", 3000 },
                 { null, "It's a SHAKE-POWERED-PRESENT! AHHHH!", 4000 }
             },
-            new PinkieEvent(Guid.Parse("d09f236d-cc83-477c-b159-7d6c0a32cf9a")) {
+            new PinkieEvent(Guid.Parse("d09f236d-cc83-477c-b159-7d6c0a32cf9a"))
+            {
                 { null, "My head is all spinny...", 4000 },
                 { null, "SHAKE HARDER! Wheeeee!", 3000 }
             },
-            new PinkieEvent(Guid.Parse("d32836f2-cc0e-41e2-a611-36ddae0168cf")) {
+            new PinkieEvent(Guid.Parse("d32836f2-cc0e-41e2-a611-36ddae0168cf"))
+            {
                 { null, "There's over eighty different kinds of rock!", 4000 },
                 { null, "Andesite, aplite, basanite, boninite, blairmorite, dacite...", 4000 },
                 { null, "...diorite, dunite, essexite, foidolite, granite, kimberlite...", 3000 },
@@ -34,28 +37,39 @@ namespace KChristmas.AzureFunctions
                 { null, "...so like, I totally know all about rocks!", 4000 },
                 { null, "Which means that I know YOU rock!", 3000 },
             },
-            new PinkieEvent(Guid.Parse("5a7dffbf-9ae2-49f3-bcb7-bdc10dc36187")) {
+            new PinkieEvent(Guid.Parse("5a7dffbf-9ae2-49f3-bcb7-bdc10dc36187"))
+            {
                 { null, "Hey!", 2000 },
                 { "pinkie_confused.png", "What do you call...", 2000 },
                 { null, "A RHINO crossed with an ELEPHANT?", 5000 },
                 { "pinkie_bounce_up_3.png", "A RHINOPHANT! *snort* HEE HEE HEE!", 4000 },
             },
-            new PinkieEvent(Guid.Parse("eda3de30-39e5-4fcd-9a31-61f23518e7c5")) {
+            new PinkieEvent(Guid.Parse("eda3de30-39e5-4fcd-9a31-61f23518e7c5"))
+            {
                 { null, "♪ It's true some days are dark and lonely... ♪", 4000 },
                 { null, "♪ ...and maybe you feel sad... ♪", 3000 },
                 { null, "♪ But I will be there to show you that it isn't that bad! ♪", 4000 },
                 { null, "♪ There's one thing that makes me happy, ♪", 3000 },
                 { null, "♪ ...and makes my whole life worthwhile... ♪", 3000 },
-                { null, "♪ ...and that's when I talk to my friends and get them to SMILE! ♪", 5000 },
+                {
+                    null,
+                    "♪ ...and that's when I talk to my friends and get them to SMILE! ♪",
+                    5000
+                },
                 { null, "Yeah!", 2000 },
             },
-            new PinkieEvent(Guid.Parse("8d37618b-3f70-48bc-93a4-766a76d2df6b")) {
+            new PinkieEvent(Guid.Parse("8d37618b-3f70-48bc-93a4-766a76d2df6b"))
+            {
                 { null, "Hi!", 4000 },
                 { null, "So, what do you think?", 4000 },
                 { "pinkie_confused.png", "Chimicherry...", 3000 },
                 { null, "...or cherrychanga?", 3000 },
                 { null, "No idea?", 3000 },
-                { "pinkie_bounce_up_3.png", "That's okay! Tell me if you come up with something!", 5000 },
+                {
+                    "pinkie_bounce_up_3.png",
+                    "That's okay! Tell me if you come up with something!",
+                    5000
+                },
             },
             new PinkieEvent(Guid.Parse("4e56c4db-4843-4a24-abf7-49ef06efc722"))
             {
@@ -87,7 +101,11 @@ namespace KChristmas.AzureFunctions
                 { null, "On the one hoof, I spend a lot of my time baking sweet treats.", 4000 },
                 { null, "So I know what it's like to have to wait for something!", 3000 },
                 { null, "But I also know that waiting is the wor-hor-hor-hoooorst!", 3000 },
-                { "pinkie_confused.png", "So if you're shaking this box and totally excited about what's inside and can't wait?", 4500 },
+                {
+                    "pinkie_confused.png",
+                    "So if you're shaking this box and totally excited about what's inside and can't wait?",
+                    4500
+                },
                 { "pinkie_bounce_up_3.png", "I am TOTALLY right there with you!", 3000 },
             },
             new PinkieEvent(Guid.Parse("bdbe16e6-8766-4840-b5d9-bf1771049868"))
@@ -107,13 +125,36 @@ namespace KChristmas.AzureFunctions
                 { "pinkie_woundup_vertical.png", "POW!", 3000 },
                 { "pinkie_bounce_up_3.png", "See? Whaddaya think? Pretty great, huh?", 3000 },
                 { null, "I know you don't need it anymore, but I think it's pretty neat!", 4000 },
-            }
+            },
+            new PinkieEvent(new Guid("892177eb-91e1-4ccd-860a-23342f6f03ba"))
+            {
+                { null, "So I've been trying to get my friend Twilight to join me.", 4000 },
+                { "pinkie_confused.png", "But she keeps complaining about silly things!", 3000 },
+                { null, "\"You can't just go dimension hopping, Pinkie!\"", 3000 },
+                { null, "\"It's really dangerous, Pinkie!\"", 3000 },
+                {
+                    "pinkie_bounce_up_3.png",
+                    "Awww, she's just being a fuddy-duddy. I'll get her next year!",
+                    3000
+                },
+            },
+            new PinkieEvent(new Guid("b7b22d80-3560-43bd-9fd6-b6b16e09e3fb"))
+            {
+                { null, "Okay. I got it.", 2500 },
+                { null, "So you got this mystery box, right?", 3000 },
+                { null, "And it won't actually tell you anything useful?", 3000 },
+                { null, "And it's just a big ol' dumby silly dumb dumb?", 3000 },
+                { null, "I BET-", 2000 },
+                { null, "That if you feed it CUPCAKES!", 3000 },
+                { null, "It'll tell you something more helpful.", 3000 }
+            },
         };
 
         [FunctionName("GetPinkieEvents")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
-            ILogger log)
+            ILogger log
+        )
         {
             log.LogInformation($"Returning PinkieEvents at {DateTime.UtcNow}");
 
