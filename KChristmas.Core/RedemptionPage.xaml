@@ -62,7 +62,7 @@
                            Style="{StaticResource RedemptionLabelStyle}"
                            FontSize="Small"
                            FontAttributes="Bold"
-                           Text="(I'll help you pick it out.)"/>
+                           Text="(This is also a gift from your family, as they pitched in. I'll help you pick it out.)"/>
 
                 </StackLayout>
             </Grid>
