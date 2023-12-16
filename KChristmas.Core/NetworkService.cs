@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using KChristmas.Models;
 using Newtonsoft.Json;
-using Xamarin.Essentials;
 
 namespace KChristmas.Core
 {

@@ -141,7 +141,17 @@ namespace KChristmas.AzureFunctions
             "The box mumbles sleepily, then turns over.",
             "\"What are you, some kinda homeowner?\"",
             "Definitely not Elon Musk. Eurgh.",
-            "Smells like something brighter."
+            "Smells like something brighter.",
+            "🎵 Tea and chocolate \n(chocolate and tea) 🎵",
+            "*inarticulate bleating noises*",
+            "YELLOW BUG BUG BUG BUG BUG",
+            "Beetle bonk!",
+            "Smells like huckleberries.",
+            "Box box box box box box box",
+            "How'd the buffalo wish his kid farewell?\n\"Bye, son.\"",
+            "a",
+            "aa",
+            "AAAAAAAAAAAAAAAAA"
         };
 
         [FunctionName("GetGiftHints")]
