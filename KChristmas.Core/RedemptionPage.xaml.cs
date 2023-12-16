@@ -42,10 +42,12 @@ namespace KChristmas.Core
 
             await Task.WhenAll(
                 AcceptGiftPanelStep3.ScaleTo(1, 2000),
-                AcceptGiftPanelStep3.FadeTo(1, 2000)
+                AcceptGiftPanelStep3.FadeTo(1, 2000),
+                BlurryGlasses.ScaleTo(1, 2000),
+                BlurryGlasses.FadeTo(1, 2000)
             );
 
-            await Task.Delay(4000);
+            await Task.Delay(2000);
 
             await Task.WhenAll(
                 AcceptGiftPanelStep4.ScaleTo(1, 2000),
@@ -54,10 +56,14 @@ namespace KChristmas.Core
 
             await Task.Delay(1000);
 
+            NormalGlasses.Opacity = 1.0;
+            BlurryGlasses.Opacity = 0.0;
+
+            await Task.Delay(1000);
+
             await Task.WhenAll(
-                AcceptGiftPanelStep5.ScaleTo(1, 2000),
-                AcceptGiftPanelStep5.FadeTo(1, 2000),
-                PhoneOverlayImage.FadeTo(1, 2000)
+                AcceptGiftPanelStep5.ScaleTo(1, 1000),
+                AcceptGiftPanelStep5.FadeTo(1, 1000)
             );
 
             await Task.Delay(1500);

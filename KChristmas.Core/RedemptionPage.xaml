@@ -26,43 +26,45 @@
 
                 <StackLayout HorizontalOptions="CenterAndExpand"
                              VerticalOptions="CenterAndExpand">
-                    
+
                     <Label x:Name="AcceptGiftPanelStep1"
                            Style="{StaticResource RedemptionLabelStyle}"
-                           Text="Taking the easy way out this year."/>
+                           Text="We're bringing back an old favorite this year."/>
 
                     <Label x:Name="AcceptGiftPanelStep2"
                            Style="{StaticResource RedemptionLabelStyle}"                         
-                           Text="This one is an IOU, for obvious reasons."/>
+                           Text="This time around, your Christmas gift is..."/>
 
-                    <Label x:Name="AcceptGiftPanelStep3"
-                           Style="{StaticResource RedemptionLabelStyle}"
-                           Text="This year, your present is a brand new..."/>
-
-                    <Grid x:Name="AcceptGiftPanelStep4" 
-                          HeightRequest="400"
-                          HorizontalOptions="Center"
-                          Opacity="0"
-                          Scale="2"
-                          WidthRequest="187">
-                        <Image x:Name="PhoneImage" Source="{ext:Image phone.png}"/>
-                        <Grid>
-                            <Image x:Name="PhoneOverlayImage" 
-                                   Opacity="0"
-                                   Source="{ext:Image nightmare.png}" 
-                                   Margin="6"/>
-                        </Grid>
+                    <Grid x:Name="AcceptGiftPanelStep3">
+                        <Image x:Name="NormalGlasses" 
+                               HeightRequest="128"
+                               HorizontalOptions="Center"
+                               WidthRequest="128"
+                               Scale="1"
+                               Opacity="0"
+                               Source="{ext:Image reading_glasses_small.png}">
+                        </Image>
+                        <Image x:Name="BlurryGlasses" 
+                               HeightRequest="128"
+                               HorizontalOptions="Center"
+                               WidthRequest="128"
+                               Scale="2"
+                               Opacity="0"
+                               Source="{ext:Image reading_glasses_small_medium_blur.png}">
+                        </Image>
                     </Grid>
+
+                    <Label x:Name="AcceptGiftPanelStep4"
+                           Style="{StaticResource RedemptionLabelStyle}"                                                      
+                           Text="...uh, hm. Those are a little blurry. Can we, uh..."/>
 
                     <Label x:Name="AcceptGiftPanelStep5"
                            Style="{StaticResource RedemptionLabelStyle}"                                                      
-                           Text="...nightmare rectangle (a.k.a. smartphone)!"/>
+                           Text="There we go!"/>
 
                     <Label x:Name="AcceptGiftPanelStep6"
-                           Style="{StaticResource RedemptionLabelStyle}"
-                           FontSize="Small"
-                           FontAttributes="Bold"
-                           Text="(This is also a gift from your family, as they pitched in. I'll help you pick it out.)"/>
+                           Style="{StaticResource RedemptionLabelStyle}"                                                      
+                           Text="Glasses! The gift is me prodding you to go to the eye doctor and me paying for new glasses!"/>
 
                 </StackLayout>
             </Grid>

@@ -16,7 +16,7 @@ namespace KChristmas.Core
     {
         private const uint StartingSpecialEventCooldown = 20;
         private readonly bool SkipCountdown = true;
-        private readonly DateTime ChristmasDate = new DateTime(2022, 12, 24, 18, 0, 0);
+        private readonly DateTime ChristmasDate = new DateTime(2023, 12, 24, 15, 0, 0);
 
         private bool _isSpecialEventInProgress = false;
         private NetworkService _networkService;
