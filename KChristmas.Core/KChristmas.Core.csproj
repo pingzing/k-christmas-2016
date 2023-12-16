@@ -6,6 +6,7 @@
 		<LangVersion>8.0</LangVersion>
 	</PropertyGroup>
 
+  <!--TODO: Make this not run in CI-->
   <Target Name="_BeforeBeforeBuild" BeforeTargets="BeforeBuild">
     <Exec Command="
           echo Running dotnet format...
