@@ -17,20 +17,24 @@ namespace KChristmas.Core.SpecialEvents
 
         private static readonly PinkieEvent _firstTimeEvent = new PinkieEvent(_firstTimeScriptGuid)
         {
-            { "pinkie_bounce_up_3.png", "Hi!", 3000 },
-            { null, "Oh! Oh! I'm here again!", 3000 },
-            { null, "You know what's totally crazy-eriffic?", 4000 },
-            { null, "Even *I* don't know when I'm going to end up here!", 4000 },
-            { null, "That's like... unpresent-tendeded...ed!", 3000 },
-            { null, "In fact...", 2000 },
-            { null, "I bet *you* know what's going on, don'tcha?", 4000 },
-            { null, "Well, don't you worry!", 3000 },
-            { "pinkie_bounce_wink.png", "Your secret's safe with Auntie Pinkie!", 3000 },
+            { "pinkie_bounce_up_3.png", "Hi!", 2000 },
+            { null, "So, we meet again!", 3000 },
+            {
+                "pinkie_confused.png",
+                "You know, normally, this is where I'd say something like \"Gee, I dunno how I got here...\"",
+                4000
+            },
+            {
+                "pinkie_bounce_wink.png",
+                "But we sure do seem to run into each other a lot, huh?",
+                4000
+            },
             {
                 "pinkie_bounce_up_3.png",
-                "Super-booper great to see you again though! Byeeee!",
+                "So I think I'll just wish you a happy Hearth's Warming!",
                 3000
             },
+            { null, "Hope you get lotsa nice stuff and tasty treats!", 3000 },
         };
 
         // A few built-in Pinkie events, to make sure there are at least a few.
