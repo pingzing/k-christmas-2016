@@ -2,25 +2,25 @@
 using Android.Content.PM;
 using Android.OS;
 using KChristmas.Core;
+using Microsoft.Maui;
+using Microsoft.Maui.ApplicationModel;
 
 namespace KChristmas.Android
 {
-    [Activity(Label = "Merry Christmas, Kaisa!", Icon = "@drawable/icon",
-        Theme = "@style/MainTheme", MainLauncher = true,
-        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    [Activity(
+        Label = "Merry Christmas, Kaisa!",
+        Icon = "@drawable/icon",
+        Theme = "@style/MainTheme",
+        MainLauncher = true,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
+    )]
+    public class MainActivity : MauiAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
 
-            Xamarin.Essentials.Platform.Init(this, bundle);
-            Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+            Platform.Init(this, bundle);
         }
     }
 }
-

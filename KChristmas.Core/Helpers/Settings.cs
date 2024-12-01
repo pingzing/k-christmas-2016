@@ -1,5 +1,5 @@
-using System;
-using Xamarin.Essentials;
+﻿using System;
+using Microsoft.Maui.Storage;
 
 namespace KChristmas.Core.Helpers
 {
@@ -11,7 +11,7 @@ namespace KChristmas.Core.Helpers
         private static readonly bool GiftAcceptedDefault = false;
 
         private const string LastSeenVersionKey = "LastSeenVersion";
-        private static readonly Version LastSeenVersionDefault = new Version(1, 0, 0);
+        private static readonly Version LastSeenVersionDefault = new(1, 0, 0);
 
         private const string PinkieSeenCountKey = nameof(PinkieSeenCountKey);
         private static readonly int PinkieSeenCountDefault = 0;
@@ -43,7 +43,7 @@ namespace KChristmas.Core.Helpers
         {
             get
             {
-                string lastSeenVersion = Preferences.Get(LastSeenVersionKey, null);
+                string? lastSeenVersion = Preferences.Get(LastSeenVersionKey, null);
                 if (String.IsNullOrWhiteSpace(lastSeenVersion))
                 {
                     return LastSeenVersionDefault;

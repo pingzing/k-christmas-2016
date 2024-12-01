@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using KChristmas.Core.Helpers;
 using KChristmas.Core.SpecialEvents;
 using Newtonsoft.Json;
-using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace KChristmas.Core
 {
@@ -16,13 +9,13 @@ namespace KChristmas.Core
     {
         private const uint StartingSpecialEventCooldown = 20;
         private readonly bool SkipCountdown = true;
-        private readonly DateTime ChristmasDate = new DateTime(2023, 12, 24, 15, 0, 0);
+        private readonly DateTime ChristmasDate = new(2024, 12, 24, 15, 0, 0);
 
         private bool _isSpecialEventInProgress = false;
         private NetworkService _networkService;
-        private List<string> _giftHints = new List<string>();
-        private List<string> _seenHints = new List<string>();
-        private Random rand = new Random();
+        private List<string> _giftHints = new();
+        private List<string> _seenHints = new();
+        private Random rand = new();
         private uint CurrentSpecialEventCooldown = 5;
         private PinkieEventService _pinkieService;
         private SensorSpeed _sensorSpeed = SensorSpeed.Game;
@@ -58,14 +51,14 @@ namespace KChristmas.Core
             if (DateTime.Now < ChristmasDate && !SkipCountdown)
             {
                 //Set up countdown timer
-                Device.StartTimer(
+                Dispatcher.StartTimer(
                     TimeSpan.FromSeconds(1),
                     () =>
                     {
                         TimeSpan timeTillChristmas = ChristmasDate - DateTime.Now;
                         if (timeTillChristmas > TimeSpan.Zero)
                         {
-                            Device.BeginInvokeOnMainThread(
+                            Dispatcher.Dispatch(
                                 () =>
                                     TimerLabel.Text =
                                         $"{timeTillChristmas.Days}d {timeTillChristmas.Hours}h {timeTillChristmas.Minutes}m {timeTillChristmas.Seconds}s"
@@ -74,7 +67,7 @@ namespace KChristmas.Core
                         }
                         else
                         {
-                            Device.BeginInvokeOnMainThread(() =>
+                            Dispatcher.Dispatch(() =>
                             {
                                 TimerLabel.Text = "0d 0h 0m 0s";
                                 NextButton.IsVisible = true;
@@ -177,9 +170,9 @@ namespace KChristmas.Core
             await ShowHint();
         }
 
-        private SemaphoreSlim _shakeLock = new SemaphoreSlim(1);
+        private SemaphoreSlim _shakeLock = new(1);
 
-        private async void Accelerometer_ShakeDetected(object sender, EventArgs e)
+        private async void Accelerometer_ShakeDetected(object? sender, EventArgs e)
         {
             if (await _shakeLock.WaitAsync(100))
             {
@@ -264,7 +257,7 @@ namespace KChristmas.Core
         {
             var floatingHintLabel = new Label
             {
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                FontSize = 16,
                 VerticalOptions = LayoutOptions.Center,
                 TranslationY = -130,
                 HorizontalTextAlignment = TextAlignment.Center,
@@ -272,7 +265,7 @@ namespace KChristmas.Core
             };
             if (textColor != null)
             {
-                floatingHintLabel.TextColor = textColor.Value;
+                floatingHintLabel.TextColor = textColor;
             }
 
             Grid.SetRow(floatingHintLabel, 0);

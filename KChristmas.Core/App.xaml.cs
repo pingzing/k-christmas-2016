@@ -1,7 +1,4 @@
-﻿using System;
-using KChristmas.Core.Helpers;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using KChristmas.Core.Helpers;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -9,9 +6,9 @@ namespace KChristmas.Core
 {
     public partial class App : Application
     {
-        private static readonly Version CURRENT_VERSION = new Version(8, 0, 0);
+        private static readonly Version CURRENT_VERSION = new(8, 0, 0);
 
-        public NavigationPage Navigation = new NavigationPage();
+        public NavigationPage Navigation = new();
 
         public App()
         {

@@ -1,4 +1,4 @@
-﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:KChristmas.Core"
              xmlns:ext="clr-namespace:KChristmas.Core.XamlExtensions"
@@ -26,29 +26,29 @@
                                 Grid.Row="0" Grid.RowSpan="4"                                
                                 HorizontalOptions="FillAndExpand"
                                 VerticalOptions="FillAndExpand"/>
-                <Button x:Name="GiftBase"
+                <ImageButton x:Name="GiftBase"
                         Grid.Row="1"
                         BackgroundColor="Transparent"
                         BorderColor="Transparent"
                         BorderWidth="0"
                         HorizontalOptions="CenterAndExpand"
-                        Image="{ext:ImageExtension gift_base_small.png}"
+                        Source="{ext:ImageExtension gift_base_small.png}"
                         Clicked="Gift_Clicked"/>
-                <Button x:Name="GiftTop" 
+                <ImageButton x:Name="GiftTop" 
                         Grid.Row="0" 
                         BackgroundColor="Transparent"
                         BorderColor="Transparent"
                         BorderWidth="0"
                         HorizontalOptions="CenterAndExpand"                        
-                        Image="{ext:ImageExtension gift_top_small.png}"
+                        Source="{ext:ImageExtension gift_top_small.png}"
                         Clicked="Gift_Clicked">
-                    <Button.Margin>
+                    <ImageButton.Margin>
                         <OnPlatform x:TypeArguments="Thickness">
                             <On Platform="UWP" Value="0,0,0,-20"/>
                             <On Platform="Android" Value="0,0,0,-45"/>
                         </OnPlatform>
-                    </Button.Margin>
-                </Button>
+                    </ImageButton.Margin>
+                </ImageButton>
                 <Label x:Name="TimerLabel" 
                        Grid.Row="2"
                        HorizontalTextAlignment="Center"/>

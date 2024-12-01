@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using KChristmas.Core.Helpers;
-using Xamarin.Forms;
+﻿using KChristmas.Core.Helpers;
 
 namespace KChristmas.Core
 {

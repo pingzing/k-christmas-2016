@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using KChristmas.Core.Helpers;
+﻿using KChristmas.Core.Helpers;
 using KChristmas.Core.XamlExtensions;
 using KChristmas.Models;
-using Xamarin.Forms;
 
 namespace KChristmas.Core.SpecialEvents
 {
@@ -15,54 +10,64 @@ namespace KChristmas.Core.SpecialEvents
             "0b3a9635-c6e2-4bc4-804a-59f614925fd2"
         );
 
-        private static readonly PinkieEvent _firstTimeEvent = new PinkieEvent(_firstTimeScriptGuid)
-        {
-            { "pinkie_bounce_up_3.png", "Hi!", 2000 },
-            { null, "So, we meet again!", 3000 },
+        private static readonly PinkieEvent _firstTimeEvent =
+            new(_firstTimeScriptGuid)
             {
-                "pinkie_confused.png",
-                "You know, normally, this is where I'd say something like \"Gee, I dunno how I got here...\"",
-                4000
-            },
-            {
-                "pinkie_bounce_wink.png",
-                "But we sure do seem to run into each other a lot, huh?",
-                4000
-            },
-            {
-                "pinkie_bounce_up_3.png",
-                "So I think I'll just wish you a happy Hearth's Warming!",
-                3000
-            },
-            { null, "Hope you get lotsa nice stuff and tasty treats!", 3000 },
-        };
+                { "pinkie_bounce_up_3.png", "Hi!", 2000 },
+                { null, "So, we meet again!", 3000 },
+                {
+                    "pinkie_confused.png",
+                    "You know, normally, this is where I'd say something like \"Gee, I dunno how I got here...\"",
+                    4000
+                },
+                {
+                    "pinkie_bounce_wink.png",
+                    "But we sure do seem to run into each other a lot, huh?",
+                    4000
+                },
+                {
+                    "pinkie_bounce_up_3.png",
+                    "So I think I'll just wish you a happy Hearth's Warming!",
+                    3000
+                },
+                { null, "Hope you get lotsa nice stuff and tasty treats!", 3000 },
+            };
 
         // A few built-in Pinkie events, to make sure there are at least a few.
         // Doesn't include the first time script, as it's a special case.
-        private List<PinkieEvent> _pinkieEvents = new List<PinkieEvent>
-        {
-            new PinkieEvent(Guid.Parse("73d3b631-41b2-4fc3-a9e9-543c7675e6a8"))
+        private List<PinkieEvent> _pinkieEvents =
+            new()
             {
-                { null, "Oh, hi again!", 3000 },
-                { null, "Fancy meeting you here, hee hee!", 4000 },
-                { null, "I'm actually here to tell you...", 4000 },
-                { "pinkie_confused.png", "Um, hang on, I wrote it on my hoof...", 4000 },
-                { null, "Oh! Here! 'You should stop breaking the fourth wall...", 3000 },
-                { null, "...just to deliver present hints?'", 5000 },
-                { "pinkie_bounce_up_3.png", "Oh! That was a message for me! Hehe, sorry!", 4000 },
-                { null, "Anyway, gotta go again! Bye!", 3000 }
-            },
-            new PinkieEvent(Guid.Parse("bd0f3f57-1a7c-4ac5-9c8f-eea37c3a2d4e"))
-            {
-                { null, "Boo!", 3000 },
-                { "pinkie_confused.png", "Oh wait, wrong holiday.", 4000 },
-                { "pinkie_bounce_up_3.png", "Anyway, I think I know what your present is!", 4000 },
-                { "pinkie_confused.png", "...exceeeeept I'm not supposed to tell you.", 4000 },
-                { "pinkie_bounce_up_3.png", "Sorry!", 2000 }
-            },
-        };
-        private List<Guid> _seenScripts = new List<Guid>();
-        private Random rand = new Random();
+                new PinkieEvent(Guid.Parse("73d3b631-41b2-4fc3-a9e9-543c7675e6a8"))
+                {
+                    { null, "Oh, hi again!", 3000 },
+                    { null, "Fancy meeting you here, hee hee!", 4000 },
+                    { null, "I'm actually here to tell you...", 4000 },
+                    { "pinkie_confused.png", "Um, hang on, I wrote it on my hoof...", 4000 },
+                    { null, "Oh! Here! 'You should stop breaking the fourth wall...", 3000 },
+                    { null, "...just to deliver present hints?'", 5000 },
+                    {
+                        "pinkie_bounce_up_3.png",
+                        "Oh! That was a message for me! Hehe, sorry!",
+                        4000
+                    },
+                    { null, "Anyway, gotta go again! Bye!", 3000 }
+                },
+                new PinkieEvent(Guid.Parse("bd0f3f57-1a7c-4ac5-9c8f-eea37c3a2d4e"))
+                {
+                    { null, "Boo!", 3000 },
+                    { "pinkie_confused.png", "Oh wait, wrong holiday.", 4000 },
+                    {
+                        "pinkie_bounce_up_3.png",
+                        "Anyway, I think I know what your present is!",
+                        4000
+                    },
+                    { "pinkie_confused.png", "...exceeeeept I'm not supposed to tell you.", 4000 },
+                    { "pinkie_bounce_up_3.png", "Sorry!", 2000 }
+                },
+            };
+        private List<Guid> _seenScripts = new();
+        private Random rand = new();
         private NetworkService _networkService;
 
         private MainPage _mainPageReference;
@@ -75,17 +80,24 @@ namespace KChristmas.Core.SpecialEvents
 
         public async Task UpdateEventsFromRemote()
         {
-            PinkieEvent[] remoteEvents = await _networkService.GetPinkieEvents();
+            PinkieEvent[]? remoteEvents = await _networkService.GetPinkieEvents();
             IEnumerable<Guid> existingIds = _pinkieEvents.Select(x => x.Id);
-            IEnumerable<PinkieEvent> newEvents = remoteEvents.Where(
+            IEnumerable<PinkieEvent>? newEvents = remoteEvents?.Where(
                 x => !existingIds.Contains(x.Id)
             );
-            _pinkieEvents.AddRange(newEvents);
+            if (newEvents != null)
+            {
+                _pinkieEvents.AddRange(newEvents);
+            }
         }
 
-        public async Task Run(Button giftBase, Button giftTop, AbsoluteLayout specialEventCanvas)
+        public async Task Run(
+            ImageButton giftBase,
+            ImageButton giftTop,
+            AbsoluteLayout specialEventCanvas
+        )
         {
-            Rectangle baseRect = giftBase.Bounds;
+            Rect baseRect = giftBase.Bounds;
             double xMid = baseRect.X + baseRect.Width / 2;
             double pinkieHeight = 94;
             double pinkieWidth = 94;
@@ -101,7 +113,7 @@ namespace KChristmas.Core.SpecialEvents
 
             AbsoluteLayout.SetLayoutBounds(
                 pinkieImage,
-                new Rectangle(xMid - pinkieMid, baseRect.Y - Y(40), pinkieWidth, pinkieHeight)
+                new Rect(xMid - pinkieMid, baseRect.Y - Y(40), pinkieWidth, pinkieHeight)
             );
             specialEventCanvas.Children.Add(pinkieImage);
 
@@ -201,19 +213,19 @@ namespace KChristmas.Core.SpecialEvents
                 {
                     pinkieImage.Source = ImageExtension.GetPlatformIndependentPath(line.ImagePath);
                 }
-                _ = _mainPageReference.ShowFloatingText(line.Text, Color.HotPink);
+                _ = _mainPageReference.ShowFloatingText(line.Text, Colors.HotPink);
                 await Task.Delay(line.MillisecondsTime);
             }
         }
 
         private double Y(double independentYVal)
         {
-            if (Device.RuntimePlatform == Device.UWP)
+            if (DeviceInfo.Platform == DevicePlatform.WinUI)
             {
                 return independentYVal;
             }
 
-            if (Device.RuntimePlatform == Device.Android)
+            if (DeviceInfo.Platform == DevicePlatform.Android)
             {
                 if (independentYVal > 0)
                 {

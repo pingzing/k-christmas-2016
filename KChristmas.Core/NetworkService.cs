@@ -1,8 +1,5 @@
-﻿using System.Net.Http;
-using System.Threading.Tasks;
-using KChristmas.Models;
+﻿using KChristmas.Models;
 using Newtonsoft.Json;
-using Xamarin.Essentials;
 
 namespace KChristmas.Core
 {
@@ -47,14 +44,14 @@ namespace KChristmas.Core
             return await response.Content.ReadAsStringAsync();
         }
 
-        public async Task<PinkieEvent[]> GetPinkieEvents()
+        public async Task<PinkieEvent[]?> GetPinkieEvents()
         {
             HttpResponseMessage? response = await _httpClient.GetAsync(
                 $"{_baseUrl}{GetPinkieEventsUrl}"
             );
             if (!response.IsSuccessStatusCode)
             {
-                return new PinkieEvent[0];
+                return Array.Empty<PinkieEvent>();
             }
 
             return JsonConvert.DeserializeObject<PinkieEvent[]>(
