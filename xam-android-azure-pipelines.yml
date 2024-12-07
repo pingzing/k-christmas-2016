@@ -27,6 +27,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
+    publishWebProjects: false
     projects: './KChristmas.Android/KChristmas.Android.csproj'
     arguments: '-f ${targetFramework} -c ${buildConfiguration} -o ${outputDirectory}/ -p:AndroidKeyStore=true -p:AndroidSigningKeyStore=${androidKeystore.secureFilePath} -p:AndroidSigningKeyAlias=2018-and-beyond -p:AndroidSigningKeyPass=${keystore_password} -p:AndroidSigningStorePass=${keystore_password}'
 
