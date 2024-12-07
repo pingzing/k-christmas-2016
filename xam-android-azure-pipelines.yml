@@ -9,7 +9,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
-  targetFramework: 'net8.0-android'
+  targetFramework: 'net8.0-android34.0'
 
 steps:
 
