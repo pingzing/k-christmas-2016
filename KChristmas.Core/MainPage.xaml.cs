@@ -257,21 +257,18 @@ namespace KChristmas.Core
         {
             var floatingHintLabel = new Label
             {
-                FontSize = 16,
+                FontSize = 26,
                 VerticalOptions = LayoutOptions.Center,
                 TranslationY = -130,
                 HorizontalTextAlignment = TextAlignment.Center,
-                Opacity = 0
+                Opacity = 1,
+                Text = text,
+                TextColor = textColor ?? Colors.Black,
             };
-            if (textColor != null)
-            {
-                floatingHintLabel.TextColor = textColor;
-            }
-
             Grid.SetRow(floatingHintLabel, 0);
+
             TooEarlyPanel.Children.Add(floatingHintLabel);
 
-            floatingHintLabel.Text = text;
             await floatingHintLabel.FadeTo(1, 100);
             await Task.WhenAll(
                 floatingHintLabel.FadeTo(0, 5000),

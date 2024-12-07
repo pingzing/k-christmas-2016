@@ -1,40 +1,34 @@
-# Builds the Xamarin.Android application
+# Builds the MAUI Android application
 
 trigger:
 - master
 
 pool:
-  vmImage: 'macos-latest'
+  vmImage: 'ubuntu-latest'
 
 variables:
   buildConfiguration: 'Release'
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+  targetFramework: 'net8.0-android34.0'
 
 steps:
-- task: NuGetToolInstaller@1
-  displayName: "Get latest Nuget tools"
 
-- task: NuGetCommand@2
-  displayName: "Run nuget restore"
+- task: DownloadSecureFile@1
+  name: androidKeystore
+  displayName: 'Download Android Keystore'
   inputs:
-    restoreSolution: '**/KChristmas-CI-AndroidOnly.sln'
+    secureFile: 'android_keystore.keystore'
 
-- task: XamarinAndroid@1
-  displayName: "Build Xamarin Android project"
+- task: UseDotNet@2
   inputs:
-    projectFile: '**/*droid*.csproj'
-    outputDirectory: '$(outputDirectory)'
-    configuration: '$(buildConfiguration)'
+    packageType: 'sdk'
+    version: '8.x'
 
-- task: AndroidSigning@3
-  displayName: "Sign and Zipalign APK"
+- task: DotNetCoreCLI@2
   inputs:
-    apkFiles: '$(outputDirectory)/*.apk'
-    apksignerKeystoreFile: 'android_keystore.keystore'
-    apksignerKeystorePassword: '$(keystore_password)'
-    apksignerKeystoreAlias: '2018-and-beyond'
-    apksignerKeyPassword: '$(keystore_password)'
-
+    command: 'publish'
+    projects: './KChristmas.Android/KChristmas.Android.csproj'
+    arguments: '-f ${targetFramework} -c ${buildConfiguration} -o ${outputDirectory}/ -p:AndroidKeyStore=true -p:AndroidSigningKeyStore=${androidKeystore.secureFilePath} -p:AndroidSigningKeyAlias=2018-and-beyond -p:AndroidSigningKeyPass=${keystore_password} -p:AndroidSigningStorePass=${keystore_password}'
 
 - task: PublishBuildArtifacts@1
   displayName: "Publish output directory"

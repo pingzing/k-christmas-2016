@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Threading.Tasks;
 
 namespace KChristmas.AzureFunctions
 {
@@ -151,7 +151,17 @@ namespace KChristmas.AzureFunctions
             "How'd the buffalo wish his kid farewell?\n\"Bye, son.\"",
             "a",
             "aa",
-            "AAAAAAAAAAAAAAAAA"
+            "AAAAAAAAAAAAAAAAA",
+            "Sounds tea-like.",
+            "Smells like healthier living.",
+            "The box is excited to travel to Germany in Summer(ish) of 2025!\n(Unless it is the future, and that has already happened.)",
+            "\"Hey, nice looking decor,\" the box tells you.",
+            "The box is feeling a bit empty.",
+            "You hear giggling.",
+            "THE POWER OF LOVE",
+            "Oof. What a year, you know?",
+            "Hey, nice car.",
+            "\"You say he made *how many* cookies?\"",
         };
 
         [FunctionName("GetGiftHints")]
