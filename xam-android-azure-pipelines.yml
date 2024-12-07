@@ -26,9 +26,9 @@ steps:
     version: '8.x'
 
 - task: CmdLine@2
-  displayName: 'Install Latest .NET MAUI Workload'
+  displayName: 'Install Latest MAUI Android Workload'
   inputs:
-    script: 'dotnet workload install maui'
+    script: 'dotnet workload install maui-android'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build and Sign APK'
