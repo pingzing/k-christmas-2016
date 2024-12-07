@@ -20,11 +20,18 @@ steps:
     secureFile: 'android_keystore.keystore'
 
 - task: UseDotNet@2
+  displayName: 'Set .NET Version'
   inputs:
     packageType: 'sdk'
     version: '8.x'
 
+- task: CmdLine@2
+  displayName: 'Install Latest .NET MAUI Workload'
+  inputs:
+    script: 'dotnet workload install maui'
+
 - task: DotNetCoreCLI@2
+  displayName: 'Build and Sign APK'
   inputs:
     command: 'publish'
     publishWebProjects: false
