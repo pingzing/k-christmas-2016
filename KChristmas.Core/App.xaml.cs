@@ -6,7 +6,7 @@ namespace KChristmas.Core
 {
     public partial class App : Application
     {
-        private static readonly Version CURRENT_VERSION = new(8, 0, 0);
+        private static readonly Version CURRENT_VERSION = new(9, 0, 0);
 
         public NavigationPage Navigation = new();
 

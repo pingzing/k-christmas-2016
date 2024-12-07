@@ -29,42 +29,15 @@
 
                     <Label x:Name="AcceptGiftPanelStep1"
                            Style="{StaticResource RedemptionLabelStyle}"
-                           Text="We're bringing back an old favorite this year."/>
+                           Text="Nothing exciting this year! Like explained earlier, this year is basically just the box*."/>
 
                     <Label x:Name="AcceptGiftPanelStep2"
-                           Style="{StaticResource RedemptionLabelStyle}"                         
-                           Text="This time around, your Christmas gift is..."/>
+                           Style="{StaticResource RedemptionLabelStyle}"
+                           Text="*Unless...."/>
 
-                    <Grid x:Name="AcceptGiftPanelStep3">
-                        <Image x:Name="NormalGlasses" 
-                               HeightRequest="128"
-                               HorizontalOptions="Center"
-                               WidthRequest="128"
-                               Scale="1"
-                               Opacity="0"
-                               Source="{ext:Image reading_glasses_small.png}">
-                        </Image>
-                        <Image x:Name="BlurryGlasses" 
-                               HeightRequest="128"
-                               HorizontalOptions="Center"
-                               WidthRequest="128"
-                               Scale="2"
-                               Opacity="0"
-                               Source="{ext:Image reading_glasses_small_medium_blur.png}">
-                        </Image>
-                    </Grid>
-
-                    <Label x:Name="AcceptGiftPanelStep4"
-                           Style="{StaticResource RedemptionLabelStyle}"                                                      
-                           Text="...uh, hm. Those are a little blurry. Can we, uh..."/>
-
-                    <Label x:Name="AcceptGiftPanelStep5"
-                           Style="{StaticResource RedemptionLabelStyle}"                                                      
-                           Text="There we go!"/>
-
-                    <Label x:Name="AcceptGiftPanelStep6"
-                           Style="{StaticResource RedemptionLabelStyle}"                                                      
-                           Text="Glasses! The gift is me prodding you to go to the eye doctor and me paying for new glasses!"/>
+                    <Label x:Name="AcceptGiftPanelStep3"
+                           Style="{StaticResource RedemptionLabelStyle}"
+                           Text="...you'd like a new SSD for your computer. I've been thinking about getting you one, but only if you think it's okay! Let me know &lt;3"/>
 
                 </StackLayout>
             </Grid>

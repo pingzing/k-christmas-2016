@@ -15,22 +15,21 @@ namespace KChristmas.Core.SpecialEvents
             {
                 { "pinkie_bounce_up_3.png", "Hi!", 2000 },
                 { null, "So, we meet again!", 3000 },
+                { "pinkie_confused.png", "This is starting to get pretty routine, huh?", 3000 },
+                { "pinkie_bounce_wink.png", "But I don't mind!", 3000 },
+                { "pinkie_bounce_up_3.png", "I like showing up in boxes...", 3000 },
                 {
-                    "pinkie_confused.png",
-                    "You know, normally, this is where I'd say something like \"Gee, I dunno how I got here...\"",
-                    4000
-                },
-                {
-                    "pinkie_bounce_wink.png",
-                    "But we sure do seem to run into each other a lot, huh?",
-                    4000
-                },
-                {
-                    "pinkie_bounce_up_3.png",
-                    "So I think I'll just wish you a happy Hearth's Warming!",
+                    null,
+                    "...and wishing other ponies (or whatever you are) happy Hearth's Warmings!",
                     3000
                 },
-                { null, "Hope you get lotsa nice stuff and tasty treats!", 3000 },
+                { null, "So that's what I'm gonna do!", 4000 },
+                { null, "HAPPY HEARTH'S WARMING!", 4000 },
+                {
+                    "pinkie_bounce_wink.png",
+                    "Or at least, month-of-Hearth's-Warming. You know what I mean!",
+                    4000
+                },
             };
 
         // A few built-in Pinkie events, to make sure there are at least a few.

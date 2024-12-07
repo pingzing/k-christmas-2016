@@ -20,6 +20,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <AbsoluteLayout x:Name="SpecialEventCanvas"
@@ -55,6 +56,12 @@
                        Grid.Row="4"
                        HorizontalTextAlignment="Center" 
                        Text="It's not Christmas yet! You're going to have to wait! Come back on the 24th!"/>
+                <Label x:Name="InfoLabel"
+                       Grid.Row="5"
+                       HorizontalTextAlignment="Center"   
+                       Margin="0, 20, 0, 0"
+                       Text="(Psst, heads up! The gift inside the box this year is kind of minor. The app is mostly just for box fun this time around!)"                       
+                       TextColor="Gray"/>
             </Grid>
 
             <!--This is where the floating hint labels go. They're all stacked on Row 0.-->

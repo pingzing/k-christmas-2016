@@ -1,74 +1,45 @@
 ﻿using KChristmas.Core.Helpers;
 
-namespace KChristmas.Core
+namespace KChristmas.Core;
+
+public partial class RedemptionPage : ContentPage
 {
-    public partial class RedemptionPage : ContentPage
+    public RedemptionPage()
     {
-        public RedemptionPage()
+        InitializeComponent();
+    }
+
+    private async void ContentPage_Appearing(object sender, EventArgs e)
+    {
+        if (!Settings.GiftAccepted)
         {
-            InitializeComponent();
+            Settings.GiftAccepted = true;
         }
 
-        private async void ContentPage_Appearing(object sender, EventArgs e)
-        {
-            if (!Settings.GiftAccepted)
-            {
-                Settings.GiftAccepted = true;
-            }
+        await ShowCompletePanel();
+    }
 
-            await ShowCompletePanel();
-        }
+    private async Task ShowCompletePanel()
+    {
+        await Task.Delay(1000);
 
-        private async Task ShowCompletePanel()
-        {
-            await Task.Delay(1000);
+        await Task.WhenAll(
+            AcceptGiftPanelStep1.FadeTo(1, 2000),
+            AcceptGiftPanelStep1.ScaleTo(1, 2000)
+        );
 
-            await Task.WhenAll(
-                AcceptGiftPanelStep1.FadeTo(1, 2000),
-                AcceptGiftPanelStep1.ScaleTo(1, 2000)
-            );
+        await Task.Delay(3000);
 
-            await Task.Delay(3000);
+        await Task.WhenAll(
+            AcceptGiftPanelStep2.FadeTo(1, 2000),
+            AcceptGiftPanelStep2.ScaleTo(1, 2000)
+        );
 
-            await Task.WhenAll(
-                AcceptGiftPanelStep2.FadeTo(1, 2000),
-                AcceptGiftPanelStep2.ScaleTo(1, 2000)
-            );
+        await Task.Delay(2000);
 
-            await Task.Delay(2000);
-
-            await Task.WhenAll(
-                AcceptGiftPanelStep3.ScaleTo(1, 2000),
-                AcceptGiftPanelStep3.FadeTo(1, 2000),
-                BlurryGlasses.ScaleTo(1, 2000),
-                BlurryGlasses.FadeTo(1, 2000)
-            );
-
-            await Task.Delay(2000);
-
-            await Task.WhenAll(
-                AcceptGiftPanelStep4.ScaleTo(1, 2000),
-                AcceptGiftPanelStep4.FadeTo(1, 2000)
-            );
-
-            await Task.Delay(1000);
-
-            NormalGlasses.Opacity = 1.0;
-            BlurryGlasses.Opacity = 0.0;
-
-            await Task.Delay(1000);
-
-            await Task.WhenAll(
-                AcceptGiftPanelStep5.ScaleTo(1, 1000),
-                AcceptGiftPanelStep5.FadeTo(1, 1000)
-            );
-
-            await Task.Delay(1500);
-
-            await Task.WhenAll(
-                AcceptGiftPanelStep6.ScaleTo(1, 2000),
-                AcceptGiftPanelStep6.FadeTo(1, 2000)
-            );
-        }
+        await Task.WhenAll(
+            AcceptGiftPanelStep3.FadeTo(1, 2000),
+            AcceptGiftPanelStep3.ScaleTo(1, 2000)
+        );
     }
 }
