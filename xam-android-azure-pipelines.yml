@@ -9,7 +9,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
-  targetFramework: 'net8.0-android34.0'
+  targetFramework: 'net8.0-android'
 
 steps:
 
@@ -33,10 +33,6 @@ steps:
 - script: |
     C:\Android\android-sdk\cmdline-tools\latest\bin\sdkmanager "platforms;android-34"
   displayName: 'Install Android SDK v34'
-
-- script: |
-    C:\Android\android-sdk\cmdline-tools\latest\bin\sdkmanager --list_installed
-  displayName: 'View Installed Android SDK'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build and Sign APK'
