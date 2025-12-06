@@ -1,13 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using KChristmas.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using System.Collections.Generic;
-using KChristmas.Models;
 
 namespace KChristmas.AzureFunctions
 {
@@ -177,6 +177,18 @@ namespace KChristmas.AzureFunctions
                     { null, "But...", 1500 },
                     { "pinkie_surprised.png", "I ATE ONE!", 3000 }
                 },
+                new PinkieEvent(new Guid("c869c214-7ba1-41e7-b10b-4adc7ba654dd"))
+                {
+                    { null, "I GOT", 3000 },
+                    { null, "I GOT IT I GOT IT I GOT IT", 2000 },
+                    { null, "So.", 2000 },
+                    { null, "You know cupcakes, right?", 3000 },
+                    { null, "Most deliciouserino treats ever, right?", 3000 },
+                    { null, "WHAT IF.", 2500 },
+                    { null, "What if we COMBINED THEM.", 3000 },
+                    { null, "WITH.", 1500 },
+                    { null, "COOKIES?!", 2500 }
+                }
             };
 
         [FunctionName("GetPinkieEvents")]

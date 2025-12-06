@@ -13,9 +13,8 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Grid HorizontalOptions="Center" VerticalOptions="Center">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -25,14 +24,14 @@
 
                 <AbsoluteLayout x:Name="SpecialEventCanvas"
                                 Grid.Row="0" Grid.RowSpan="4"                                
-                                HorizontalOptions="FillAndExpand"
-                                VerticalOptions="FillAndExpand"/>
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill"/>
                 <ImageButton x:Name="GiftBase"
                         Grid.Row="1"
                         BackgroundColor="Transparent"
                         BorderColor="Transparent"
                         BorderWidth="0"
-                        HorizontalOptions="CenterAndExpand"
+                        HorizontalOptions="Center"
                         Source="{ext:ImageExtension gift_base_small.png}"
                         Clicked="Gift_Clicked"/>
                 <ImageButton x:Name="GiftTop" 
@@ -40,7 +39,7 @@
                         BackgroundColor="Transparent"
                         BorderColor="Transparent"
                         BorderWidth="0"
-                        HorizontalOptions="CenterAndExpand"                        
+                        HorizontalOptions="Center"                        
                         Source="{ext:ImageExtension gift_top_small.png}"
                         Clicked="Gift_Clicked">
                 </ImageButton>
@@ -56,12 +55,6 @@
                        Grid.Row="4"
                        HorizontalTextAlignment="Center" 
                        Text="It's not Christmas yet! You're going to have to wait! Come back on the 24th!"/>
-                <Label x:Name="InfoLabel"
-                       Grid.Row="5"
-                       HorizontalTextAlignment="Center"   
-                       Margin="0, 20, 0, 0"
-                       Text="(Psst, heads up! The gift inside the box this year is kind of minor. The app is mostly just for box fun this time around!)"                       
-                       TextColor="Gray"/>
             </Grid>
 
             <!--This is where the floating hint labels go. They're all stacked on Row 0.-->
@@ -72,7 +65,7 @@
                     Clicked="NextButton_Clicked"
                     InputTransparent="True"
                     Opacity="0"                    
-                    HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                    HorizontalOptions="Fill" VerticalOptions="End"
                     TextColor="White"
                     Text="Timer's up! Tap here to open your present!"/>
         </Grid>

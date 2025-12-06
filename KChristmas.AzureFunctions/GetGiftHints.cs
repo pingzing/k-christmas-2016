@@ -162,6 +162,12 @@ namespace KChristmas.AzureFunctions
             "Oof. What a year, you know?",
             "Hey, nice car.",
             "\"You say he made *how many* cookies?\"",
+            "*flute noises*",
+            "TANK YOO VEDDY MAKKARA",
+            "*inarticulate partitive complaining noises",
+            "'It's a little rich for my blood.'",
+            "*kirin noises*",
+            "Just imagine the She-Ra intro theme started playing. We don't have the budget.",
         };
 
         [FunctionName("GetGiftHints")]

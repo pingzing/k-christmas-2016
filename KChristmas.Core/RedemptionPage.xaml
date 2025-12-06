@@ -10,6 +10,7 @@
         <Style x:Key="RedemptionLabelStyle" TargetType="Label">
             <Setter Property="Opacity" Value="0"/>
             <Setter Property="Scale" Value="2"/>
+            <Setter Property="Margin" Value="0, 10, 0, 0"/>
             <Setter Property="FontSize" Value="Large"/>
             <Setter Property="LineBreakMode" Value="WordWrap"/>
             <Setter Property="HorizontalTextAlignment" Value="Center"/>
@@ -24,20 +25,26 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <StackLayout HorizontalOptions="CenterAndExpand"
-                             VerticalOptions="CenterAndExpand">
+                <StackLayout HorizontalOptions="Center"
+                             VerticalOptions="Center">
 
                     <Label x:Name="AcceptGiftPanelStep1"
                            Style="{StaticResource RedemptionLabelStyle}"
-                           Text="Nothing exciting this year! Like explained earlier, this year is basically just the box*."/>
+                           Text="This year, the gift is something a little abstract."/>
 
                     <Label x:Name="AcceptGiftPanelStep2"
                            Style="{StaticResource RedemptionLabelStyle}"
-                           Text="*Unless...."/>
+                           Text="It is NOT, as Bob Barker (rest in peace) from the game show The Price Is Right would say, 'A BRAND NYEW CAHHHH!'"/>
 
                     <Label x:Name="AcceptGiftPanelStep3"
                            Style="{StaticResource RedemptionLabelStyle}"
-                           Text="...you'd like a new SSD for your computer. I've been thinking about getting you one, but only if you think it's okay! Let me know &lt;3"/>
+                           Text="It is, in fact, a donation of €400 toward your goal of A New Flute."/>
+
+                    <Label x:Name="AcceptGiftPanelStep4"
+                           Style="{StaticResource RedemptionLabelStyle}"
+                           FontSize="Medium"
+                           Margin="0, 20, 0, 0"
+                           Text="(Payable immediately upon poking Neil.)"/>
 
                 </StackLayout>
             </Grid>

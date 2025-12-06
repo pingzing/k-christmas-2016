@@ -6,30 +6,21 @@ namespace KChristmas.Core.SpecialEvents
 {
     public class PinkieEventService
     {
-        private static readonly Guid _firstTimeScriptGuid = Guid.Parse(
-            "0b3a9635-c6e2-4bc4-804a-59f614925fd2"
-        );
-
         private static readonly PinkieEvent _firstTimeEvent =
-            new(_firstTimeScriptGuid)
+            new(new Guid("0b3a9635-c6e2-4bc4-804a-59f614925fd2"))
             {
                 { "pinkie_bounce_up_3.png", "Hi!", 2000 },
-                { null, "So, we meet again!", 3000 },
-                { "pinkie_confused.png", "This is starting to get pretty routine, huh?", 3000 },
-                { "pinkie_bounce_wink.png", "But I don't mind!", 3000 },
-                { "pinkie_bounce_up_3.png", "I like showing up in boxes...", 3000 },
+                { null, "Whew. What a year, right?", 3000 },
+                { "pinkie_confused.png", "I decided to learn how to play the Flappaphone.", 3000 },
+                { "pinkie_bounce_wink.png", "And boy, are my arms tired!", 3000 },
                 {
-                    null,
-                    "...and wishing other ponies (or whatever you are) happy Hearth's Warmings!",
-                    3000
-                },
-                { null, "So that's what I'm gonna do!", 4000 },
-                { null, "HAPPY HEARTH'S WARMING!", 4000 },
-                {
-                    "pinkie_bounce_wink.png",
-                    "Or at least, month-of-Hearth's-Warming. You know what I mean!",
+                    "pinkie_bounce_up_3.png",
+                    "Hee hee! I like it though, because if you do it right...",
                     4000
                 },
+                { null, "...it's a wind instrument! But if you do it wrong...", 3000 },
+                { null, "...it's a PERCUSSION instrument.", 3000 },
+                { null, "Anyway, have a cozy Hearth's Warming!", 4000 },
             };
 
         // A few built-in Pinkie events, to make sure there are at least a few.
@@ -37,7 +28,7 @@ namespace KChristmas.Core.SpecialEvents
         private List<PinkieEvent> _pinkieEvents =
             new()
             {
-                new PinkieEvent(Guid.Parse("73d3b631-41b2-4fc3-a9e9-543c7675e6a8"))
+                new PinkieEvent(new Guid("73d3b631-41b2-4fc3-a9e9-543c7675e6a8"))
                 {
                     { null, "Oh, hi again!", 3000 },
                     { null, "Fancy meeting you here, hee hee!", 4000 },
@@ -52,7 +43,7 @@ namespace KChristmas.Core.SpecialEvents
                     },
                     { null, "Anyway, gotta go again! Bye!", 3000 }
                 },
-                new PinkieEvent(Guid.Parse("bd0f3f57-1a7c-4ac5-9c8f-eea37c3a2d4e"))
+                new PinkieEvent(new Guid("bd0f3f57-1a7c-4ac5-9c8f-eea37c3a2d4e"))
                 {
                     { null, "Boo!", 3000 },
                     { "pinkie_confused.png", "Oh wait, wrong holiday.", 4000 },

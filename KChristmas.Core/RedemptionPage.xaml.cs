@@ -35,11 +35,18 @@ public partial class RedemptionPage : ContentPage
             AcceptGiftPanelStep2.ScaleTo(1, 2000)
         );
 
-        await Task.Delay(2000);
+        await Task.Delay(5000);
 
         await Task.WhenAll(
             AcceptGiftPanelStep3.FadeTo(1, 2000),
             AcceptGiftPanelStep3.ScaleTo(1, 2000)
+        );
+
+        await Task.Delay(3000);
+
+        await Task.WhenAll(
+            AcceptGiftPanelStep4.FadeTo(1, 2000),
+            AcceptGiftPanelStep4.ScaleTo(1, 2000)
         );
     }
 }
