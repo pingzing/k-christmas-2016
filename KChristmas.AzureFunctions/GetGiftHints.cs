@@ -168,6 +168,11 @@ namespace KChristmas.AzureFunctions
             "'It's a little rich for my blood.'",
             "*kirin noises*",
             "Just imagine the She-Ra intro theme started playing. We don't have the budget.",
+            "KnowWhatTimeItIs?",
+            "PINK!!!!!!!",
+            "Smells incorporeal.",
+            "*The box hums K-Pop Demon Hunters' \"Golden\".*",
+            "Sounds high-pitched."
         };
 
         [FunctionName("GetGiftHints")]
