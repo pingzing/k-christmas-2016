@@ -125,7 +125,7 @@ namespace KChristmas.AzureFunctions
             "Did you know that boxes are native to Rectanglia?",
             "Text 220-BOX for more exciting box facts!",
             "From hell's heart, the contents of the box seem... cozy?",
-            "\"What is a box?\" the box sighs, \"A a miserable pile of wrapped secrets!\"",
+            "\"What is a box?\" the box sighs, \"A miserable pile of wrapped secrets!\"",
             "What d'you do with a drunken box? (EARLAI IN THE MOR-NIN)",
             "The box winks at you seductively.",
             "The box attempts to wink at you seductively, but just sort of scrunches up instead.",
